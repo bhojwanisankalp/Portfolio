@@ -1,0 +1,91 @@
+[{
+			"id": "W012A3CDE",
+			"real_name": "Egon Spengler",
+			"tz": "America/Los_Angeles",
+			"activity_periods": [{
+					"start_time": "Feb 1 2020  1:33PM",
+					"end_time": "Feb 1 2020 1:54PM"
+				},
+				{
+					"start_time": "Mar 1 2020  11:11AM",
+					"end_time": "Mar 1 2020 2:00PM"
+				},
+				{
+					"start_time": "Mar 16 2020  5:33PM",
+					"end_time": "Mar 16 2020 8:02PM"
+				}
+			]
+		},
+		{
+			"id": "W07QCRP12",
+			"real_name": "Jane Doe",
+			"tz": "Asia/Bahrain",
+			"activity_periods": [{
+					"start_time": "Feb 1 2020  1:33PM",
+					"end_time": "Feb 1 2020 1:54PM"
+				},
+				{
+					"start_time": "Mar 1 2020  11:11AM",
+					"end_time": "Mar 1 2020 2:00PM"
+				},
+				{
+					"start_time": "Mar 16 2020  5:33PM",
+					"end_time": "Mar 16 2020 8:02PM"
+				}
+			]
+		},
+		{
+			"id": "W07HGRPA4",
+			"real_name": "Rick Harris",
+			"tz": "America/Rio_Branco",
+			"activity_periods": [{
+					"start_time": "Aug 1 2020  2:50PM",
+					"end_time": "AUG 1 2020 6:15PM"
+				},
+				{
+					"start_time": "Sep 1 2020  12:11AM",
+					"end_time": "Sep 1 2020 3:00PM"
+				},
+				{
+					"start_time": "Dec 16 2020  5:33PM",
+					"end_time": "Dec 16 2020 8:02PM"
+				}
+			]
+		},
+		{
+			"id": "W07QCRCV4",
+			"real_name": "Charles Southgood",
+			"tz": "Europe/Dublin",
+			"activity_periods": [{
+					"start_time": "Jan 1 2020  1:33PM",
+					"end_time": "Jan 1 2020 1:54PM"
+				},
+				{
+					"start_time": "May 1 2020  11:11AM",
+					"end_time": "May 1 2020 2:00PM"
+				},
+				{
+					"start_time": "Jun 16 2020  5:33PM",
+					"end_time": "Jun 16 2020 8:02PM"
+				}
+			]
+		},
+		{
+			"id": "W07QCRZX4",
+			"real_name": "Linda Bay",
+			"tz": "Australia/Queensland",
+			"activity_periods": [{
+					"start_time": "Feb 1 2020  1:33PM",
+					"end_time": "Feb 1 2020 1:54PM"
+				},
+				{
+					"start_time": "Mar 1 2020  11:11AM",
+					"end_time": "Mar 1 2020 2:00PM"
+				},
+				{
+					"start_time": "Mar 16 2020  5:33PM",
+					"end_time": "Mar 16 2020 8:02PM"
+				}
+			]
+		}
+	]
