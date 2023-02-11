@@ -28,3 +28,13 @@ class ActivityPeriod(models.Model):
 
 	def __str__(self):
 		return self.user.real_name + ' Date ' + self.start_time.strftime("%d-%m-%y")
+
+class Contact(models.Model):
+	name = models.CharField(max_length=255, null=False)
+	email = models.EmailField(max_length=500, null=True)
+	description = models.TextField(null=True)
+	created_at  = models.DateTimeField(auto_now_add = True, null = True)
+	updated_at = models.DateTimeField(auto_now = True, null = True)
+
+	def __str__(self):
+		return self.name + ' ' + self.created_at.strftime("%d-%m-%y %H:%M:%S")

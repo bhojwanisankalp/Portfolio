@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 from decouple import config
 import dj_database_url
-import django_heroku
+# import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,9 +26,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = True #config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -43,10 +43,12 @@ INSTALLED_APPS = [
     #Custom Apps
     'userapp',
     #Libs
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -82,7 +84,10 @@ WSGI_APPLICATION = 'user_activity.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default=config('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
+        }
     }
 
 
@@ -145,4 +150,9 @@ REST_FRAMEWORK = {
     ]
 }
 
-django_heroku.settings(locals())
+CORS_ALLOWED_ORIGINS= [
+    "http://127.0.0.1",
+    "http://localhost"
+]
+
+# django_heroku.settings(locals())

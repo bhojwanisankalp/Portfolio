@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
-from userapp.serializers import UserSerializer
+from userapp.serializers import UserSerializer, ContactSerializer
 from userapp.models import User
 from rest_framework.permissions import IsAuthenticated
 
@@ -44,3 +44,12 @@ def users(request):
 		print(e)
 	context = {'ok':False, 'error':'Something went wrong'}
 	return Response(context)
+
+@api_view(['POST'])
+def submit_contact(request):
+	serializer = ContactSerializer(data=request.data)
+	if serializer.is_valid():
+		serializer.save()
+		return Response({"success":True,"message": "Contact saved successfully"},status=200)
+	else:
+		return Response({"success":False, "error": serializer.errors}, status=400)

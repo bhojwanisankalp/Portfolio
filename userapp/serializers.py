@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User, ActivityPeriod
+from .models import User, ActivityPeriod, Contact
 
 class ActivityPeriodListSerializers(serializers.ModelSerializer):
 	""" Serializers To serialize List of ActivityPeriod Model with associated User Model """
@@ -21,3 +21,10 @@ class UserSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = User
 		fields = ('id', 'real_name', 'tz', 'activity_periods')
+
+class ContactSerializer(serializers.ModelSerializer):
+	""" Serializers To serialize Contact Model """
+
+	class Meta:
+		model = Contact
+		fields = ('name', 'email', 'description')
