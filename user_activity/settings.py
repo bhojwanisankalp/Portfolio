@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True #config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com', 'localhost', "3.110.207.232"]
 
 
 # Application definition
@@ -152,7 +152,9 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS= [
     "http://127.0.0.1",
-    "http://localhost"
+    "http://localhost",
+    "http://3.110.207.232",
+    "https://3.110.207.232"
 ]
 
 # django_heroku.settings(locals())
